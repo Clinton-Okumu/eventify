@@ -35,7 +35,7 @@ export default function ContactPage() {
 
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <section className="bg-card p-8 rounded-lg border">
+        <section className="bg-card p-8 rounded-lg border shadow-lg">
           <h2 className="text-3xl font-bold text-foreground mb-6">Send us a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -106,7 +106,7 @@ export default function ContactPage() {
 
         {/* Contact Info */}
         <section className="space-y-8">
-          <div className="bg-card p-8 rounded-lg border">
+          <div className="bg-card p-8 rounded-lg border shadow-lg">
             <h2 className="text-3xl font-bold text-foreground mb-6">Get in Touch</h2>
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
@@ -139,7 +139,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg border">
+          <div className="bg-card p-8 rounded-lg border shadow-lg">
             <h3 className="text-xl font-bold text-foreground mb-4">Office Hours</h3>
             <div className="space-y-2 text-muted-foreground">
               <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
@@ -148,7 +148,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg border">
+          <div className="bg-card p-8 rounded-lg border shadow-lg">
             <h3 className="text-xl font-bold text-foreground mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <Button variant="outline" size="icon" className="w-10 h-10">

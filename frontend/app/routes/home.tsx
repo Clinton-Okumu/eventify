@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <main className="flex-1 bg-gradient-to-br from-gray-50 to-gray-100">
+            <main className="flex-1 bg-white">
                 <Hero />
                 <FeaturedEvents />
                 <UpcomingEvents />

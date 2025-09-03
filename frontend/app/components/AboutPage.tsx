@@ -32,13 +32,13 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section className="grid md:grid-cols-2 gap-12 mb-16">
-        <div className="bg-card p-8 rounded-lg border">
+        <div className="bg-card p-8 rounded-lg border shadow-lg">
           <h2 className="text-3xl font-bold text-foreground mb-4">Our Mission</h2>
           <p className="text-muted-foreground">
             To revolutionize the way people discover and attend events by providing a seamless, user-friendly platform that brings communities together.
           </p>
         </div>
-        <div className="bg-card p-8 rounded-lg border">
+        <div className="bg-card p-8 rounded-lg border shadow-lg">
           <h2 className="text-3xl font-bold text-foreground mb-4">Our Vision</h2>
           <p className="text-muted-foreground">
             To be the world's leading event platform, fostering connections and creating unforgettable experiences for millions of users globally.
@@ -51,7 +51,7 @@ export default function AboutPage() {
         <h2 className="text-4xl font-bold text-foreground text-center mb-12">Meet Our Team</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {team.map((member, index) => (
-            <div key={index} className="bg-card p-6 rounded-lg border text-center">
+            <div key={index} className="bg-card p-6 rounded-lg border shadow-lg text-center">
               <img
                 src={member.image}
                 alt={member.name}
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-card p-8 rounded-lg border">
+      <section className="bg-card p-8 rounded-lg border shadow-lg">
         <h2 className="text-3xl font-bold text-foreground text-center mb-8">Eventify by Numbers</h2>
         <div className="grid md:grid-cols-4 gap-8 text-center">
           <div>

@@ -14,7 +14,7 @@ export default function Events() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 bg-gradient-to-br from-gray-50 to-gray-100">
+      <main className="flex-1 bg-white">
         <EventsPage />
       </main>
       <Footer />
