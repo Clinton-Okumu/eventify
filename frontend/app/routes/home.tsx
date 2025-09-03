@@ -1,5 +1,7 @@
-
 import Footer from "~/components/Footer";
+import Hero from "~/components/Hero";
+import FeaturedEvents from "~/components/FeaturedEvents";
+import UpcomingEvents from "~/components/UpcomingEvents";
 import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
 
@@ -14,8 +16,10 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <main className="flex-1">
-                {/* Content will go here */}
+            <main className="flex-1 bg-gradient-to-br from-gray-50 to-gray-100">
+                <Hero />
+                <FeaturedEvents />
+                <UpcomingEvents />
             </main>
             <Footer />
         </>
