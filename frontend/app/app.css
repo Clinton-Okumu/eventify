@@ -74,6 +74,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Custom admin theme colors */
+  --admin-primary: #1919e6;
+  --admin-background: #111122;
+  --admin-foreground: #242447;
+  --admin-text: #ffffff;
+  --admin-placeholder: #9393c8;
 }
 
 .dark {
@@ -146,4 +153,53 @@
 
 .auth-btn-secondary {
   @apply bg-gray-200 text-gray-700 hover:bg-gray-300;
+}
+
+/* Admin login page custom styles */
+.admin-login-page {
+  background-color: var(--admin-background);
+}
+
+.admin-login-card {
+  background-color: var(--admin-foreground);
+  border: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.admin-login-title {
+  color: var(--admin-text);
+}
+
+.admin-login-subtitle {
+  color: var(--admin-placeholder);
+}
+
+.admin-login-label {
+  color: var(--admin-text);
+}
+
+.admin-login-input {
+  background-color: transparent;
+  border-color: #4a5568;
+  color: var(--admin-text);
+}
+
+.admin-login-input::placeholder {
+  color: var(--admin-placeholder);
+}
+
+.admin-login-input:focus {
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 2px rgba(25, 25, 230, 0.2);
+}
+
+.admin-login-button {
+  background-color: var(--admin-primary);
+  color: var(--admin-text);
+  border-color: var(--admin-primary);
+}
+
+.admin-login-button:hover {
+  background-color: var(--admin-primary);
+  opacity: 0.9;
 }

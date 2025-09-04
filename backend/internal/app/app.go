@@ -1,7 +1,9 @@
 package app
 
 import (
+	"backend/internal/api"
 	"backend/internal/models"
+	"backend/internal/store"
 	"backend/migrations"
 	"database/sql"
 	"fmt"
@@ -11,8 +13,9 @@ import (
 )
 
 type Application struct {
-	Logger *log.Logger
-	DB     *sql.DB
+	Logger        *log.Logger
+	DB            *sql.DB
+	EventsHandler *api.EventsHandler
 }
 
 func NewApplication() (*Application, error) {
@@ -29,12 +32,15 @@ func NewApplication() (*Application, error) {
 	logger := log.New(os.Stdout, "", log.Ldate|log.Ltime)
 
 	// stores will go here
+	eventsStore := store.NewPostgresEventStore(pgDB)
 
 	// handlers
+	eventHandler := api.NewEventsHandler(eventsStore, logger)
 
 	app := &Application{
-		Logger: logger,
-		DB:     pgDB,
+		Logger:        logger,
+		EventsHandler: eventHandler,
+		DB:            pgDB,
 	}
 
 	return app, nil
